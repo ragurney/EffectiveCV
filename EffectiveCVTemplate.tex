@@ -1,0 +1,211 @@
+%
+% LaTeX source of my resume
+% =========================
+%
+%
+
+
+% Start a document with the here given default font size and paper size.
+\documentclass[10pt,a4paper]{article}
+\newcommand{\tab}[1]{\hspace{.2\textwidth}\rlap{#1}}
+\newcommand{\dotfillshr}{\vspace{-0.8em}\dotfill}
+% Set the page margins.
+\usepackage[a4paper,margin=0.1in]{geometry}
+\usepackage{tabularx}
+% Setup the language.
+%\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+\usepackage[lf]{venturis} %% lf option gives lining figures as default;
+%\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault} 
+\usepackage[T1]{fontenc}
+\usepackage[urw-garamond]{mathdesign}
+% Makes resume-specific commands available.
+\usepackage{bbding}
+\usepackage{resume}
+
+
+
+
+
+\begin{document}  % begin the content of the document
+\sloppy  % this to relax whitespacing in favour of straight margins
+
+% title on top of the document
+\begin{center}
+\maintitle{Your Name} 
+\endcenter
+
+\vspace{-2em}
+%Purpose: To obtain an intern position in the field of Computer Science that will help refine and utilize my
+%leadership and technical skills in a professional environment.
+
+% \noindent prevents paragraph's first lines from indenting
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+%\spacedhrule{0.9em}{1em}  % a horizontal line with some vertical spacing before and after
+\begin{center}
+\bigskip
+(111) 222-3333 $|$ 
+\noindent\href{mailto:example@example.com}{example\mbox{}@\mbox{}gmail.com}\\
+\hspace{0.2em} 1421 NiceStreet, Example City, CA 11111
+\end{center}
+
+%\spacedhrule{0.9em}{0em}  % a horizontal line with some vertical spacing before and after
+\vspace{-1.0em}
+\roottitle{Education}  % a root section title
+\dotfillshr
+%\spacedhrule{0em}{1em}
+%\vspace{1.3em}  % some vertical spacing
+
+
+\headedsection
+  {\href{http://www.youruniversity.edu}{Your University, University City}}
+  {City, State} 
+  {%
+  \headedsubsection
+    {Bachelors of Science: Computer Science}
+    {September 1998 -- {\bfseries{June 3001}}}
+   \\ \hspace{1.2em} {\bfseries{{Business Minor}}}
+    
+    {
+      \bodytext
+      {
+        GPA: 4.00\\Honors: All honors\\
+        Relevant Coursework:\\
+        \hspace{2.0em}{\bfseries{CS: List desired coursework}} 
+        \hspace{1.8em}{\bfseries{Business: List desired coursework}}
+      }
+    }
+  }
+
+
+\headedsection
+  {\href{http://www.otheruniversity.edu/}{Second University}}
+  {City, State} 
+  {%
+  \headedsubsection
+    {Semester Study Abroad}
+    {July 2015 -- January 2016}
+    {
+    \bodytext
+    {
+      \sbull Details 
+    }
+    }
+  }
+
+
+%%%%%%%% START TECHNICAL SKILLS HERE %%%%%%%% 
+\vspace{-1.0em}
+\roottitle{Technical Strengths}
+\dotfillshr
+%\spacedhrule{0em}{1em}
+
+\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
+  {Programming Languages:}
+  {Java $|$ C\# $|$ C++ $|$ HTML+CSS $|$ }
+  \vspace{0.6em}
+  \inlineheadsection
+  {Tools/Methodologies:}
+  { Git $|$ Vim $|$ Unity 3D + NGUI \& Mechanim $|$ JIRA, Confluence, SourceTree, Agile Development }
+  \vspace{0.6em}
+
+%%%%%%%% START THE EXPERIENCE SECTION HERE %%%%%%%%%
+\vspace{-0.5 em}
+\roottitle{Professional Experience}
+\dotfillshr
+%\spacedhrule{0em}{1em}
+
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{http://www.company.com}{Employer}}
+  {{City, State}}
+{%
+  \headedsubsection
+    {Job Title}
+    {Date -- Date}
+    {
+    \bodytext
+    {
+      \sbull Details\\ 
+      \sbull Details \\
+      \sbull Details
+    }
+  }
+}
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{http://www.company.com}{Employer}}
+  {{City, State}} {%
+  \headedsubsection
+    {Job Title}
+    {Date -- Date}
+    {
+    \bodytext
+    {
+      \sbull Details\\
+      \sbull Details \\
+      \sbull Details\\
+    Technologies Used: Add keywords for resume optimization.
+    }
+  } 
+}
+
+
+\vspace{-1.0em}
+\roottitle{Projects and Other Activities}
+\dotfillshr
+%\spacedhrule{0em}{1em}
+\headedsection
+  {\href{www.projectlinkhere.com}{ProjectTitle}}
+  {\textsc{}} {%
+  \headedsubsection
+    {Project Subtitle}
+    {} 
+    {
+      \bodytext
+      {
+        \sbull Details\\ 
+        \sbull Details
+        \sbull Details
+      }
+    }
+  }
+\headedsection  % sets the header for a subsection and contains usually body text
+  {\href{http://weburl.com/}{Other Activity Title}}
+  {{City, State}} {%
+  \headedsubsection
+    {Title}
+    {Date -- Date}
+    {
+      \bodytext
+      {
+        \sbull Details\\ 
+        \sbull Details\\ 
+      }
+    }
+  }
+\vspace{-1.0em}
+\roottitle{Other}
+\dotfillshr
+%\spacedhrule{0em}{0.1em}
+ \inlineheadsection
+  {Clubs/Organizations:}
+  { 
+    \hfill \break 
+    Club1\\
+    Club2\\
+  }
+  \vspace{0.6em}
+  
+\inlineheadsection
+{Personal Interests:}
+{ Interest1, Interest2, Interest3, Interest4}
+  
+\vspace{1.5em}
+
+  
+\end{center}
+\end{document}
